@@ -14,15 +14,15 @@ by jiangC
 
 ##Layout style
 
-![layout划分（红色部分）](archives/css/assets/images/2012-12-22-1.JPG)
+![layout划分（红色部分）](../archives/css/assets/images/2012-12-22-1.JPG)
 
 然而实际上，中间部分是变高的，在没有css trick的情况下（本例中可将文字杀图片设置成绝对定位），也可以将其归类到Module的范围内中去。
 
-![layout中间部分高度不一致](archives/css/assets/images/2012-12-23-2.JPG)
+![layout中间部分高度不一致](../archives/css/assets/images/2012-12-23-2.JPG)
 
 ##Module style
 
-![module划分（蓝色部分）](archives/css/assets/images/2012-12-22-1.JPG)
+![module划分（蓝色部分）](../archives/css/assets/images/2012-12-22-1.JPG)
 
 ##State style
 

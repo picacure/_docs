@@ -6,4 +6,4 @@
 
 
 
-![Alt text](archives/fq/images/2014-11-10-01.png)
+![Alt text](../archives/fq/images/2014-11-10-01.png)

@@ -27,7 +27,7 @@
 
 + 替换位置
 
-	![Alt text](archives/QuickFind/images/2014-11-05-01.png)
+	![Alt text](../archives/QuickFind/images/2014-11-05-01.png)
 
 
 

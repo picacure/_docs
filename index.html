@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JiangC's Workshop</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="keywords" content="personal website, animation, games, articles,code repo"/>
+    <meta name="description" content="JiangC's Workshop"/>
+    <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div class="head">
+        <div class="container">
+            <ul>
+                <li><a class="activate" href="html/fq.html">非奇游戏</a></li>
+                <li><a class="activate" href="html/PhoneGap.html">PhoneGap</a></li>
+                <li><a class="activate" href="html/unity.html">unity</a></li>
+                <li><a class="activate" href="html/CSharp.html">C#</a></li>
+                <li><a class="activate" href="html/DS_Al.html">数据结构和算法</a></li>
+                <li><a class="activate" href="html/notes.html">随笔</a></li>
+                <li><a class="activate" href="html/game.html">游戏模板接入文档</a></li>
+                <li><a class="activate" href="html/index.html">工具——时序</a></li>
+                <li><a class="activate" href="html/guitar.html">吉他</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script>
+    function hasClass(ele, cls) {
+        return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+    }
+
+    function addClass(ele, cls) {
+        if (!hasClass(ele, cls)) ele.className += " " + cls;
+    }
+
+    function removeClass(ele, cls) {
+        if (hasClass(ele, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            ele.className = ele.className.replace(reg, '');
+
+        }
+    }
+
+    var $mac = document.querySelector('.macbook');
+    var $head = document.querySelector('.head');
+    $mac.addEventListener('click',function(){
+        removeClass($head,'hide');
+        addClass($mac,'hide');
+    });
+</script>
+</body>
+</html>
