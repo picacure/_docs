@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小车各个版本</title>
+    <style>
+        html, body {
+            width: 960px;
+        }
+
+        h1 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding-left: 9pt;
+        }
+
+        .feature-card {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .feature-card li.card {
+            position: relative;
+            box-sizing: border-box;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid gainsboro;
+            background: #fafafa;
+
+            display: inline-block;
+            width: 42%;
+            vertical-align: top;
+            min-height: 350px;
+            margin: 0 1%;
+            padding: 1em;
+
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            font-size: 11pt;
+        }
+
+        .card h4 {
+            font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+            text-align: center;
+            font-weight: 400;
+            font-size: 18pt;
+            margin: 0.3em 0;
+            border-bottom: 1px solid gainsboro;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            margin: 0;
+            padding: 0;
+            margin-left: 2em;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .card .feature-action {
+            margin-top: 15px;
+            border-top: 1px solid gainsboro;
+            text-align: center;
+        }
+
+        .feature-action .flagWrap {
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+            left: 10px;
+            width: 86%;
+        }
+
+        .flag {
+            position: relative;
+            text-align: left;
+            line-height: 2em;
+            background: #ef9e01;
+            display: inline-block;
+            height: auto;
+            padding: 0.5em 0.75em 0.5em 1em;
+            margin: 0;
+            color: #FFFFFF;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 100;
+            text-decoration: none;
+        }
+
+        .flag:after {
+            content: '';
+            line-height: 2em;
+            font-size: 2em;
+            width: 0;
+            height: 0;
+            border-top: 2em solid #ef9e01;
+            border-bottom: 2em solid transparent;
+            border-left: 1em solid transparent;
+            border-right: 1em solid transparent;
+            position: absolute;
+            top: 0;
+            right: -1em;
+        }
+    </style>
+</head>
+<body>
+<h1>小车周期版本</h1>
+<ul class="feature-card">
+    <li class="card">
+        <h4>2014-12-12（feature）</h4>
+        <ul>
+            <li>1.赛道拼接，无尽赛道</li>
+        </ul>
+        <div class="feature-action">
+            <ul>
+                <li class="flagWrap"><span class="flag">位置(共享盘)：<br>\\192.168.1.206\Share\个人\jiangC\versions\2014-12
+                    -12</span></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="card">
+        <h4>2014-12-05（feature）</h4>
+        <ul>
+            <li>1.开局的加入倒计时等待</li>
+            <li>2.位置和状态的同步</li>
+            <li>3.火箭的目标：随机打</li>
+            <li>4.屏幕适配问题，左边屏幕按不到</li>
+            <li>5.加入陀螺仪的控制方式</li>
+        </ul>
+        <div class="feature-action">
+            <ul>
+                <li class="flagWrap"><span class="flag">位置(共享盘)：<br>\\192.168.1.206\Share\个人\jiangC\versions\2014-12-05</span></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="card">
+        <h4>2014-11-28（feature）</h4>
+        <ul>
+            <li>添加被击中效果（未与其他车联动）</li>
+            <li>修改导弹发射，防护罩显示bug</li>
+            <li>修正车辆速度缓动</li>
+            <li>添加箱子随机道具</li>
+        </ul>
+        <div class="feature-action">
+            <ul>
+                <li class="flagWrap"><span
+                        class="flag">位置(共享盘)：<br>\\192.168.1.206\Share\个人\jiangC\versions\2014-11-28\</span></li>
+            </ul>
+        </div>
+    </li>
+
+
+</ul>
+</body>
+</html>

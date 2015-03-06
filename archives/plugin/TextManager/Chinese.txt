@@ -1,0 +1,39 @@
+a game Made by#原作
+{0} players have made it to the end#已有{0}名玩家到达了尽头
+The world has ended#这个世界已经走到了尽头
+TOUCH TO START#触摸屏幕开始游戏
+Your best {0} of 13#你已经完成了所有关卡的{0}/13
+Search for tag#用标签搜索
+The latest players who made it to the end#最近这些玩家都到达了尽头
+Name#未命名
+Write a tag so your_friends can find you#请加一个标签吧_这样朋友们就能找到你了
+Tag#标签
+Your Name#请输入你的名字
+you made it to the end!#恭喜你到达了尽头！
+Send#发送
+Simon Jakobsson__Daniel Jakobsson__Filip Gustavson_Roger Holmquist_Christoffer olsson#Simon Jakobsson__Daniel Jakobsson__Filip Gustavson_Roger Holmquist_Christoffer olsson
+Game made by__Music by__Special thanks to:#_原作__音乐__特别感谢：
+StaffTitles#____发行__制作人__策划__编程__商务__客服邮箱__客服电话__官方QQ群号
+StaffNames#__东品西尚网络科技（北京）有限公司__强强__张鑫__吕雄一__葛佳__kf@east2west.cn__029-89298317__368442739__以任何形式向我们反馈游戏Bug或提供建议的玩家_将有机会获得官方赠送的纪念品一份
+LEVEL 1#树木
+LEVEL 2#山峰
+LEVEL 3#砂砾
+LEVEL 4#宇宙
+LEVEL 5#海洋
+LEVEL 6#岩石
+LEVEL 7#空气
+LEVEL 8#战争
+LEVEL 9#矿藏
+LEVEL 10#岛屿
+LEVEL 11#城市
+LEVEL 12#冬季
+LEVEL 13#核武器
+GAME OVER#没有到达尽头……
+<size=25>Watch a video to get 1 extra life</size>#<size=25>观看视频可以额外获得一次生命</size>
+One more chance#观看视频
+Start over#从头再来
+Tokyo Traffic Jam#
+To The End#直到尽头
+shareContent#推荐大家一款游戏，看看你们能玩到第几关~http://zhushou.360.cn/detail/index/soft_id/1809755
+shareTitle#直到尽头
+shareDesc#推荐大家一款游戏，看看你们能玩到第几关~http://zhushou.360.cn/detail/index/soft_id/1809755

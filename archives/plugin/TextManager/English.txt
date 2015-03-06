@@ -1,0 +1,39 @@
+a game Made by#The game is made by 
+{0} players have made it to the end#{0} players have made it to the end 
+The world has ended#The world has ended
+TOUCH TO START#TOUCH TO START
+Your best {0} of 13#Your best {0} of 13
+Search for tag#Search for tag
+The latest players who made it to the end#The latest players who made it to the end
+Name#Name
+Write a tag so your_friends can find you#Write a tag that your_friends can find you
+Tag#Tag
+Your Name#Your Name
+you made it to the end!#You make it to the end!
+Send#Send
+Simon Jakobsson__Daniel Jakobsson__Filip Gustavson_Roger Holmquist_Christoffer olsson#
+Game made by__Music by__Special thanks to:#
+StaffTitles#
+StaffNames#
+LEVEL 1#Tree
+LEVEL 2#Peak
+LEVEL 3#Gravel
+LEVEL 4#Universe
+LEVEL 5#Ocean
+LEVEL 6#Rock
+LEVEL 7#Air
+LEVEL 8#War
+LEVEL 9#Mine
+LEVEL 10#Island
+LEVEL 11#City
+LEVEL 12#Winter
+LEVEL 13#Nuclear weapon
+GAME OVER#GAME OVER
+<size=25>Watch a video to get 1 extra life</size>#<size=25>Watch a video to get 1 extra life</size>
+One more chance#Watch Video
+Start over#Start Over
+Tokyo Traffic Jam#
+To The End#To The End
+shareContent#What a funny game! I make it to the end .Can you ?
+shareTitle#To The End
+shareDesc#What a funny game! I make it to the end .Can you ?

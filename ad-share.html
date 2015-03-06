@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Archives</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <!--<link href="style/site.css" type="text/css" rel="stylesheet"/>-->
+    <link href="themes/github/github.css" type="text/css" rel="stylesheet"/>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="container" class="container">
+
+    <!-- /header -->
+    <div id="side-a" class="side-a">
+        <nav class="main-menu" role="navigation">
+
+            <h2>广告支付集成文档</h2>
+            <ul>
+                <li>
+                    <a href="./archives/Ad-Share/Chartboost.md">Chartboost</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/AppLovin.md">AppLovin</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/vungle.md">vungle</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/FBSDK.md">FBSDK</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/AdColony.md">AdColony</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/Tapjoy.md">Tapjoy</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/Countly.md">Countly</a>
+                </li>
+                <li>
+                    <a href="./archives/Ad-Share/FQ交叉推广.md">FQ交叉推广</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+    <div id="main" class="main two-column">
+    </div>
+    <div id="iframe" class="main two-column hide">
+
+    </div>
+</div>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/marked.js"></script>
+<script>
+/**
+ * Created by jiangcheng.wxd on 14-5-27.
+ */
+(function(window){
+    var Query = (function (queryString) {
+
+        function parseURL(url) {
+            var a =  document.createElement('a');
+            a.href = url;
+            return {
+                source: url,
+                protocol: a.protocol.replace(':',''),
+                host: a.hostname,
+                port: a.port,
+                query: a.search,
+                params: (function(){
+                    var ret = {},
+                            seg = a.search.replace(/^\?/,'').split('&'),
+                            len = seg.length, i = 0, s;
+                    for (;i<len;i++) {
+                        if (!seg[i]) { continue; }
+                        s = seg[i].split('=');
+                        ret[s[0]] = s[1];
+                    }
+                    return ret;
+                })(),
+                file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
+                hash: a.hash.replace('#',''),
+                path: a.pathname.replace(/^([^\/])/,'/$1'),
+                relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
+                segments: a.pathname.replace(/^\//,'').split('/')
+            };
+        };
+
+        function hasParam(a){
+            var params = parseURL(queryString).params;
+
+            return (a in params);
+        };
+
+        function getParamVal(key){
+            var params = parseURL(queryString).params;
+
+            return params[key];
+        };
+
+        function getHash(){
+            return parseURL(queryString).hash;
+        };
+
+        // public api
+        return {
+            hasParam: hasParam,
+            getParamVal: getParamVal,
+            hash: getHash
+        };
+    })();
+
+    window.urlQuery = Query;
+})(window);
+
+$(function () {
+    function getMarkDown(url){
+        var _pWrapper = $('#main');
+
+        window.location.hash = url;
+
+        $.ajax({
+            url: encodeURI(url),
+            type: 'GET',
+            success: function (text) {
+
+                //服务器协助解析
+                if(text.indexOf('html>') > -1){
+                    var bodyStart = text.indexOf('body>');
+                    var bodyEnd = text.lastIndexOf('body>');
+
+                    text = text.slice(bodyStart+5,bodyEnd-3);
+                }
+                else{
+                    text = marked(text);
+                }
+
+
+                var textWrapper = document.createElement('div');
+
+                textWrapper.classList.add('text');
+                textWrapper.innerHTML = text;
+
+                _pWrapper.empty().append(textWrapper);
+            },
+            error: function () {
+                alert('加载文档失败～');
+            }
+        });
+    }
+
+
+    $('.main-menu a').click(function (e) {
+        var mdUrl = $(this).attr('href');
+        getMarkDown(mdUrl);
+        e.preventDefault();
+    });
+
+
+    var firstLoadUrl = '';
+
+
+    function lookup(){
+        var hss = window.location.hash.split('/');
+
+        $('.main-menu a').each(function(){
+            if($(this).attr('href').indexOf(hss[hss.length - 1]) > -1){
+                firstLoadUrl = $(this).attr('href');
+            }
+        });
+
+        if(firstLoadUrl != ''){
+            getMarkDown(firstLoadUrl);
+        }
+    }
+
+
+    var isMobile;
+    (function() {
+        if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+                ){
+            isMobile = true;
+        }
+        else {
+            isMobile = false;
+        }
+    })();
+
+
+    lookup();
+
+    $(window).bind('hashchange',function(){
+        lookup();
+    })
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+            position: relative;
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+            transition: all .4s;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: RGBA(0, 58, 97, 1);
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 18px;
+        }
+        h1 {
+            color: #ccc;
+            text-align: center;
+            font-size: 1.5rem;
+            padding-top: 40px;
+            text-shadow: rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 1px 0, rgba(0,0,0,0.6) 0 1px, rgba(0,0,0,0.6) 0 1px;
+        }
+        .nav {
+            margin: 0px auto;
+            width: 100%;
+            min-height: auto;
+            overflow: hidden;
+        }
+        ul.list,
+        ul.list ul {
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
+        ul.list ul {
+            margin-left:10px;
+            position:relative;
+        }
+        ul.list ul:before {
+            content:"";
+            display:block;
+            width:0;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            border-left:1px solid #ccc;
+        }
+        ul.list li  {
+            margin:0;
+            padding:3px 12px;
+            text-decoration: none;
+            font-size:13px;
+            line-height:20px;
+            color:#ccc;
+            font-weight:normal;
+            position:relative;
+        }
+        ul.list li a {
+            text-decoration: none;
+            font-size:14px;
+            line-height:20px;
+            color:#ccc;
+            font-weight:bold;
+            position:relative;
+        }
+        ul.list li a:hover,
+        ul.list li a:hover+ul li a {
+            color: orangered;
+        }
+        ul.list ul li:before {
+            content:"";
+            display:block;
+            width:8px;
+            height:0;
+            border-top:1px solid #ccc;
+            position:absolute;
+            top:10px;
+            left: 0;
+        }
+        ul.list ul li:last-child:before {
+            background: RGBA(0, 58, 97, 1);
+            height: auto;
+            top: 10px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>FT广告集成</h1>
+<nav class="nav">
+    <ul class=list>
+        <li>
+            <a href="#">Start</a>
+            <ul>
+                <li>
+                    <a href="#">yield return FTGameAdLoader.StartLoad();</a>
+                    <ul>
+                        <li>
+                            <a href="#">FTTransportRunner.RunCoroutine(RoutineMarkDoneDelay(timeout));</a>
+                            <ul>
+                                <li>
+                                    <a href="#">WaitForSeconds(timeout)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">remote = BannerAdRemote.Create(pname, con, lan, "", imei, os);</a>
+                        </li>
+                        <li>
+                            <a href="#">return StartLoad(remote);</a>
+                            <ul>
+                                <li>
+                                    <a href="#">return FTTransportRunner.RunCoroutine(RoutineLoad(remote));</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">yield return AdsTransport.StartGetGameBannerAds(remote);</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">return FTTransportRunner.RunCoroutine(GetGameBannerAdsCoroutine(remote));</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">yield return _rpcChannel.StartInvokeJSON(serviceName, jsonString);</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">_adsPackage = LitJson.JsonMapper.ToObject<AdsPackage>(responseText);</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">yield return DownLoadFeatureAd(uninstalledList);</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">GameAdBanner ad = GetFeatureAdForDownload(uninstalledList);</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">return FTTransportRunner
+                                                        .RunCoroutine(LoadImagesFromServerOrCache(ad));(关键函数)</a>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#">WWW wwwDisk = new WWW("file://" + savePath);</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                FTBannerAdSource.SetFeatureAd(wwwDisk.texture, ad.marketLink, ad.httpLink, ad.packageName);
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="#">WWW www = new WWW(url);</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">FTBannerAdSource.SetFeatureAd(www.texture, ad.marketLink, ad.httpLink, ad.packageName);
+                                                                <br>System.IO.File.WriteAllBytes(savePath, www.bytes); //maybe permission will call some problem?</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">yield return
+                                                FTTransportRunner.RunCoroutine(RoutineLoadBannerAd(uninstalledList));(banner ad)</a>
+
+                                            <ul>
+                                                <li>
+                                                    <a href="#">WWW www = new WWW("file://" + GameAdCache.CACHE_ICON_ROOT + fileName);</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">FTBannerAdSource.AddBannerAds(new BannerAdSource(
+                                                        www.texture, ad.marketLink, ad.httpLink, ad.packageName, ad.desc, ad.gameName, isBannerBar));</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">WWW www = new WWW(isBannerBar ? bannerLink : iconLink);</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">FTBannerAdSource.AddBannerAds(new BannerAdSource(
+                                                        www.texture, ad.marketLink, ad.httpLink, ad.packageName, ad.desc, ad.gameName, isBannerBar));
+                                                        <br>System.IO.File.WriteAllBytes(GameAdCache.CACHE_ICON_ROOT +
+                                                        fileName, www.bytes);</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">yield return FTAdGlobalSetting.LoadSetting();</a>
+                    <ul>
+                        <li>
+                            <a href="#">return FTTransportRunner.RunCoroutine(RoutineLoadSetting(FTBannerPlatformUtil.packageName));</a>
+                            <ul>
+                                <li>
+                                    <a href="#">WWW www = new WWW(BASE_URL + packageName);</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">www.text  Parse</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
