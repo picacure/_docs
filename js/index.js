@@ -172,7 +172,7 @@ $(function () {
 	//判断客户端load不同的table样式.
 	if(isMobile && yepnope){
 		if(window.yepnope){
-			yepnope.injectCss("style/moble_table.css", function () {
+			yepnope.injectCss("../style/moble_table.css", function () {
 				lookup();
 			}, {
 				media: "print"
@@ -184,7 +184,7 @@ $(function () {
 	}
 	else{
 		if(window.yepnope){
-			yepnope.injectCss("style/pc_table.css", function () {
+			yepnope.injectCss("../style/pc_table.css", function () {
 				lookup();
 			}, {
 				media: "print"
